@@ -2,7 +2,7 @@
 
 `synthviz` is a library for creating visualizations of piano-playing from MIDI files. The videos look like this:
 
-<video src="https://replicate.com/api/models/jxmorris12/piano-transcription/files/85c361bf-41cb-4a33-bc70-3d195cf23b90/output.mp4" width="640" />
+<video src="https://user-images.githubusercontent.com/13238952/155184233-63ab83d1-ef36-47c9-8718-72f17d7d0d37.mp4"></video>
 
 Right now, synthviz just provides a Python API. Command-line API is hopefully coming soon!
 
