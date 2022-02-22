@@ -17,6 +17,12 @@ You'll need to install a couple of tools that make rendering this video possible
 
 ### python package requirements
 
+Install this package via `pypi`: 
+
+```bash
+pip install synthviz
+```
+
 ## Usage
 
 You can use synthviz through the Python API:
