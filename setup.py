@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='synthviz',
-    version='0.0.1',
+    version='0.0.2',
     description='renders cool piano videos from file',
     long_description_content_type='text/markdown',
     long_description=long_description,

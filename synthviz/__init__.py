@@ -1,1 +1,1 @@
-from .main import create_synthesia_video
+from .main import create_video
