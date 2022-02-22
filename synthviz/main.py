@@ -68,7 +68,7 @@ def pixel_range(midi_note, image_width):
 	
 	return [start_pixel, end_pixel]
 
-def create_synthesia_video(input_midi: str, 
+def create_video(input_midi: str, 
 		image_width	= 1280,
 		image_height = 720,
 		black_key_height = 2/3,
@@ -82,7 +82,7 @@ def create_synthesia_video(input_midi: str,
 	piano_height = round(image_height/6)
 	main_height = image_height - piano_height
 	time_per_pixel = 1/(main_height*vertical_speed)
-	pixels_per_frame = main_height*vertical_speed / fps
+	pixels_per_frame = main_height*vertical_speed / fps # (pix/image) * (images/s) / (frames / s) = 
 
 	note_names = {}
 
@@ -264,4 +264,4 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Render a video from midi file')
 	parser.add_argument('midi_file', type=str, default='river.mid', help='MIDI file to render')
 	args = parser.parse_args()
-	create_synthesia_video(args.midi_file)
+	create_video(args.midi_file)
