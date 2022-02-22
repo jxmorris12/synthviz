@@ -55,6 +55,30 @@ def create_video(input_midi: str,
 - `fps` (int): frames-per-second of output video
 
 
+## Creating video from raw audio
+
+With the help of the [`piano_transcription_inference`](https://github.com/qiuqiangkong/piano_transcription_inerence) library, you can make a cool video directly from raw audio! 
+
+First, install that library via `pip install piano_transcription_inference`. Then run the following code:
+
+```python
+import librosa
+import os
+import pathlib
+
+from piano_transcription_inference import PianoTranscription, sample_rate, load_audio
+from synthviz import create_video
+
+audio_input = 'my_audio.mp3'
+midi_intermediate_filename = 'transcription.mid'
+video_filename = 'output.mp4'
+
+transcriptor = PianoTranscription(device='cuda', checkpoint_path='./model.pth')
+audio, _ = librosa.core.load(str(audio_input), sr=sample_rate)
+transcribed_dict = transcriptor.transcribe(audio, midi_intermediate_filename)
+create_video(input_midi=midi_intermediate_filename, video_filename=video_filename)
+```
+
 # Credits
 
 The synthviz library was originall adapted from [this blog post](https://pappubahry.com/misc/piano_diaries/synthesia/), 
